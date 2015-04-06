@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="UpdateTimeEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TPRESOURCEALLOCATIONID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="ResourceID" Type="Edm.Int32" />
+    <Property Name="PlannedBuildStartDate" Type="Edm.DateTime" />
+    <Property Name="PlannedBuildEndDate" Type="Edm.DateTime" />
+    <Property Name="ActualBuildStartDate" Type="Edm.DateTime" />
+    <Property Name="ActualBuildEndDate" Type="Edm.DateTime" />
+    <Property Name="PlannedTestStartDate" Type="Edm.DateTime" />
+    <Property Name="PlannedTestEndDate" Type="Edm.DateTime" />
+    <Property Name="ActualTestStartDate" Type="Edm.DateTime" />
+    <Property Name="ActualTestEndDate" Type="Edm.DateTime" />
+    <Property Name="PlannedImplementationStartDate" Type="Edm.DateTime" />
+    <Property Name="PlannedImplementationEndDate" Type="Edm.DateTime" />
+    <Property Name="ActualImplementationStartDate" Type="Edm.DateTime" />
+    <Property Name="ActualImplementationEndDate" Type="Edm.DateTime" />
+    <Property Name="PlannedPostImplementationStartDate" Type="Edm.DateTime" />
+    <Property Name="PlannedPostImplementationEndDate" Type="Edm.DateTime" />
+    <Property Name="ActualPostImplementationStartDate" Type="Edm.DateTime" />
+    <Property Name="ActualPostImplementationEndDate" Type="Edm.DateTime" />
+    <Property Name="AllocationBuild" Type="Edm.Double" />
+    <Property Name="AllocationTest" Type="Edm.Double" />
+    <Property Name="AllocationImplementation" Type="Edm.Double" />
+    <Property Name="AllocationPostImplementation" Type="Edm.Double" />
+    <Property Name="IsInsert" Type="Edm.Int32" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="255" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" />
+    <Property Name="RowVersion" Type="Edm.Binary" Nullable="false" ConcurrencyMode="Fixed" annotation:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityContainer Name="ApplicationData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="UpdateTimeEntries" EntityType="LightSwitchApplication.UpdateTimeEntry" />
+  </EntityContainer>
+</Schema>

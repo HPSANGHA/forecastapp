@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ApplicationDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ApplicationDataStore">
+    <EntitySet Name="UpdateTimeEntries" EntityType="ApplicationDataStore.UpdateTimeEntry" store:Type="Tables" Schema="dbo" Table="UpdateTimeEntries" />
+  </EntityContainer>
+  <EntityType Name="UpdateTimeEntry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TPRESOURCEALLOCATIONID" Type="int" Nullable="false" />
+    <Property Name="ResourceID" Type="int" />
+    <Property Name="PlannedBuildStartDate" Type="datetime" />
+    <Property Name="PlannedBuildEndDate" Type="datetime" />
+    <Property Name="ActualBuildStartDate" Type="datetime" />
+    <Property Name="ActualBuildEndDate" Type="datetime" />
+    <Property Name="PlannedTestStartDate" Type="datetime" />
+    <Property Name="PlannedTestEndDate" Type="datetime" />
+    <Property Name="ActualTestStartDate" Type="datetime" />
+    <Property Name="ActualTestEndDate" Type="datetime" />
+    <Property Name="PlannedImplementationStartDate" Type="datetime" />
+    <Property Name="PlannedImplementationEndDate" Type="datetime" />
+    <Property Name="ActualImplementationStartDate" Type="datetime" />
+    <Property Name="ActualImplementationEndDate" Type="datetime" />
+    <Property Name="PlannedPostImplementationStartDate" Type="datetime" />
+    <Property Name="PlannedPostImplementationEndDate" Type="datetime" />
+    <Property Name="ActualPostImplementationStartDate" Type="datetime" />
+    <Property Name="ActualPostImplementationEndDate" Type="datetime" />
+    <Property Name="AllocationBuild" Type="float" />
+    <Property Name="AllocationTest" Type="float" />
+    <Property Name="AllocationImplementation" Type="float" />
+    <Property Name="AllocationPostImplementation" Type="float" />
+    <Property Name="IsInsert" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Created" Type="datetimeoffset" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="255" />
+    <Property Name="Modified" Type="datetimeoffset" />
+    <Property Name="RowVersion" Type="rowversion" Nullable="false" StoreGeneratedPattern="Computed" />
+  </EntityType>
+</Schema>

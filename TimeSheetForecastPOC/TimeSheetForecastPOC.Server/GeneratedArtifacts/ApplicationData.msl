@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="ApplicationData" StorageEntityContainer="ApplicationDataStore">
+    <EntitySetMapping Name="UpdateTimeEntries">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.UpdateTimeEntry)">
+        <MappingFragment StoreEntitySet="UpdateTimeEntries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TPRESOURCEALLOCATIONID" ColumnName="TPRESOURCEALLOCATIONID" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="PlannedBuildStartDate" ColumnName="PlannedBuildStartDate" />
+          <ScalarProperty Name="PlannedBuildEndDate" ColumnName="PlannedBuildEndDate" />
+          <ScalarProperty Name="ActualBuildStartDate" ColumnName="ActualBuildStartDate" />
+          <ScalarProperty Name="ActualBuildEndDate" ColumnName="ActualBuildEndDate" />
+          <ScalarProperty Name="PlannedTestStartDate" ColumnName="PlannedTestStartDate" />
+          <ScalarProperty Name="PlannedTestEndDate" ColumnName="PlannedTestEndDate" />
+          <ScalarProperty Name="ActualTestStartDate" ColumnName="ActualTestStartDate" />
+          <ScalarProperty Name="ActualTestEndDate" ColumnName="ActualTestEndDate" />
+          <ScalarProperty Name="PlannedImplementationStartDate" ColumnName="PlannedImplementationStartDate" />
+          <ScalarProperty Name="PlannedImplementationEndDate" ColumnName="PlannedImplementationEndDate" />
+          <ScalarProperty Name="ActualImplementationStartDate" ColumnName="ActualImplementationStartDate" />
+          <ScalarProperty Name="ActualImplementationEndDate" ColumnName="ActualImplementationEndDate" />
+          <ScalarProperty Name="PlannedPostImplementationStartDate" ColumnName="PlannedPostImplementationStartDate" />
+          <ScalarProperty Name="PlannedPostImplementationEndDate" ColumnName="PlannedPostImplementationEndDate" />
+          <ScalarProperty Name="ActualPostImplementationStartDate" ColumnName="ActualPostImplementationStartDate" />
+          <ScalarProperty Name="ActualPostImplementationEndDate" ColumnName="ActualPostImplementationEndDate" />
+          <ScalarProperty Name="AllocationBuild" ColumnName="AllocationBuild" />
+          <ScalarProperty Name="AllocationTest" ColumnName="AllocationTest" />
+          <ScalarProperty Name="AllocationImplementation" ColumnName="AllocationImplementation" />
+          <ScalarProperty Name="AllocationPostImplementation" ColumnName="AllocationPostImplementation" />
+          <ScalarProperty Name="IsInsert" ColumnName="IsInsert" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

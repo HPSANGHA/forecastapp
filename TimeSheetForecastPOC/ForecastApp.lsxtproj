@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project MSBuildVersion="4.0" ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56ed26a7-ee7c-4f60-9af1-54645ee443c8}</ProjectGuid>
+    <OutputType>WinEXE</OutputType>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <RootNamespace>TimeSheetForecastPOC</RootNamespace>
+    <AssemblyName>Microsoft.LightSwitch.Server.Host</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <LightSwitchVersion>v4.5</LightSwitchVersion>
+    <LightSwitchProjectVersion>v4.5</LightSwitchProjectVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <Name>ForecastApp</Name>
+    <LightSwitchProjectTypeV45>LightSwitch</LightSwitchProjectTypeV45>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
+    <ApplicationClientType>Browser</ApplicationClientType>
+    <ApplicationServerType>IIS</ApplicationServerType>
+    <AuthenticationType>Windows</AuthenticationType>
+    <ApplicationName>TimeSheetForecastPOC</ApplicationName>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
+    <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
+    <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
+    <AllowAllWindowsUsers>false</AllowAllWindowsUsers>
+    <AdministratorFullName />
+    <AdministratorUserName />
+    <AllowUntrustedCertificate>False</AllowUntrustedCertificate>
+    <DeployDatabase>True</DeployDatabase>
+    <AddAdministrator>False</AddAdministrator>
+    <BootstrapperComponentsUrl />
+    <DefaultInstallLocation>TimeSheetForecastPOC</DefaultInstallLocation>
+    <DeploySchema>True</DeploySchema>
+    <PublishNewDatabase>False</PublishNewDatabase>
+    <PublishUrl>http://localhost</PublishUrl>
+    <PublishSite>Default Web Site/ForecastApp</PublishSite>
+    <RemotePublish>False</RemotePublish>
+    <SkipExtraFilesOnServer>True</SkipExtraFilesOnServer>
+    <UseLightSwitchWebDeploymentProvider>False</UseLightSwitchWebDeploymentProvider>
+    <AzureAllowUpgrade>True</AzureAllowUpgrade>
+    <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <AzureDeploymentLabel>TimeSheetForecastPOC</AzureDeploymentLabel>
+    <AzureWebSite />
+    <AzureWebSpace />
+    <AzureServiceType>WebSite</AzureServiceType>
+    <AzureHostedService />
+    <AzureHostedServiceLabel>Production</AzureHostedServiceLabel>
+    <AzureStorageService />
+    <SslCertificateThumbprint />
+    <PublishServiceOnly>False</PublishServiceOnly>
+    <AzureCredentials />
+    <SharePointServerToServerCertificatePath />
+    <SharePointServerToServerCertificateIssuerId />
+    <RequireSecureConnection>True</RequireSecureConnection>
+    <PublishLocation>C:\Users\ananthsr\Desktop\Package</PublishLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug</OutputPath>
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release</OutputPath>
+    <UseDesignTimeFeatures>false</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <ItemGroup>
+    <ServiceDefinition Include="ServiceDefinition.csdef">
+      <Visible>False</Visible>
+    </ServiceDefinition>
+    <ServiceConfiguration Include="ServiceConfiguration.cscfg">
+      <Visible>False</Visible>
+    </ServiceConfiguration>
+    <DiagnosticsConfiguration Include="diagnostics.wadcfg">
+      <Visible>False</Visible>
+    </DiagnosticsConfiguration>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <ItemGroup>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Design\vslshost.exe">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>EntryPoint</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Design\vslshost.exe.config">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Desktop</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Design\vslshost.exe.manifest">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Exclude</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Server\ClientAccessPolicy.xml">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Exclude</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.Design.svc">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>Exclude</PublishType>
+    </_BuildFile>
+    <_BuildFile Include="$(LightSwitchSDKPath)\Server\Microsoft.LightSwitch.SecurityData.svc">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+    <_BuildFile Include="TimeSheetForecastPOC.Server\web.config">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+    <_BuildFile Include="TimeSheetForecastPOC.Server\default.aspx">
+      <SubFolder>
+      </SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+    <_BuildFile Include="diagnostics.wadcfg">
+      <SubFolder>bin</SubFolder>
+      <PublishType>
+      </PublishType>
+    </_BuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="TimeSheetForecastPOC.HTMLClient\ForecastApp.HTMLClient.jsproj">
+      <Name>ForecastApp.HTMLClient</Name>
+      <Project>{402c0013-ec38-4aad-a4f2-3185217c8442}</Project>
+      <Private>True</Private>
+      <Type>Client</Type>
+    </ProjectReference>
+    <ProjectReference Include="TimeSheetForecastPOC.Server\TimeSheetForecastPOC.Server.csproj">
+      <Name>TimeSheetForecastPOC.Server</Name>
+      <Project>{b45c47e1-3194-43d0-81b2-92a0069bf041}</Project>
+      <Private>True</Private>
+      <Type>Server</Type>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.Chart.lspkg">
+      <ExtensionId>C1.LightSwitch.Chart</ExtensionId>
+      <Server>C1.LIGHTSWITCH.CHART.COMMON;C1.LIGHTSWITCH.CHART.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.FlexGrid.lspkg">
+      <ExtensionId>C1.LightSwitch.FlexGrid</ExtensionId>
+      <Server>C1.LIGHTSWITCH.FLEXGRID.COMMON;C1.LIGHTSWITCH.FLEXGRID.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.Olap.lspkg">
+      <ExtensionId>C1.LightSwitch.Olap</ExtensionId>
+      <Server>C1.LIGHTSWITCH.OLAP.COMMON;C1.LIGHTSWITCH.OLAP.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.PdfViewer.lspkg">
+      <ExtensionId>C1.LightSwitch.PdfViewer</ExtensionId>
+      <Server>C1.LIGHTSWITCH.PDFVIEWER.COMMON;C1.LIGHTSWITCH.PDFVIEWER.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.RichTextBox.lspkg">
+      <ExtensionId>C1.LightSwitch.RichTextBox</ExtensionId>
+      <Server>C1.LIGHTSWITCH.RICHTEXTBOX.COMMON;C1.LIGHTSWITCH.RICHTEXTBOX.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\C1.LightSwitch.Schedule.lspkg">
+      <ExtensionId>C1.LightSwitch.Schedule</ExtensionId>
+      <Server>C1.LIGHTSWITCH.SCHEDULE.COMMON;C1.LIGHTSWITCH.SCHEDULE.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\C1D3.LightSwitch.lspkg">
+      <ExtensionId>C1D3.LightSwitch</ExtensionId>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\ExcelImporter.lspkg">
+      <ExtensionId>ExcelImporter</ExtensionId>
+      <Server>EXCELIMPORTER.COMMON;EXCELIMPORTER.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Cosmopolitan.lspkg">
+      <ExtensionId>Microsoft.LightSwitch.Cosmopolitan</ExtensionId>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\Microsoft.LightSwitch.Extensions.lspkg">
+      <ExtensionId>Microsoft.LightSwitch.Extensions</ExtensionId>
+      <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\OfficeIntegration.lspkg">
+      <ExtensionId>OfficeIntegration</ExtensionId>
+      <Server>OFFICEINTEGRATION.COMMON;OFFICEINTEGRATION.SERVER</Server>
+    </LightSwitchExtension>
+    <LightSwitchExtension Include="Extensions\Wijmo.LightSwitch.lspkg">
+      <ExtensionId>Wijmo.LightSwitch</ExtensionId>
+      <Server>WIJMO.LIGHTSWITCH.COMMON;WIJMO.LIGHTSWITCH.SERVER</Server>
+    </LightSwitchExtension>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Install>True</Install>
+      <Name>.NETFramework,Version=v4.0</Name>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Install>True</Install>
+      <Name>Microsoft.Windows.Installer.4.5</Name>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\$(LightSwitchVersion)\Microsoft.LightSwitch.targets" />
+</Project>

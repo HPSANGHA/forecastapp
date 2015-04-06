@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(Configuration)' != 'Release' ">
+    <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{402c0013-ec38-4aad-a4f2-3185217c8442}</ProjectGuid>
+    <LightSwitchVersion>v4.5</LightSwitchVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.props" />
+  <PropertyGroup>
+    <!--TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion-->
+    <LightSwitchProjectTypeV45>Client</LightSwitchProjectTypeV45>
+    <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
+    <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <SupportedCultures>en-US</SupportedCultures>
+    <DefaultPlatform>AnyCPU</DefaultPlatform>
+    <ClientProjectName>HTMLClient</ClientProjectName>
+    <ServerProjectReference>..\TimeSheetForecastPOC.Server\TimeSheetForecastPOC.Server.csproj</ServerProjectReference>
+    <LightSwitchDisplayName>HTMLClient</LightSwitchDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\c1ls-dark-4.0.20143.39.css" />
+    <Content Include="Content\c1ls-light-4.0.20143.39.css" />
+    <Content Include="Content\d3ls-dark-4.0.20143.39.css" />
+    <Content Include="Content\d3ls-light-4.0.20143.39.css" />
+    <Content Include="Content\dark-theme-2.5.1.css" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="Content\Images\msls-black-icons-18.png" />
+    <Content Include="Content\Images\msls-black-icons-36.png" />
+    <Content Include="Content\Images\msls-loader-dark.gif" />
+    <Content Include="Content\Images\msls-loader-light.gif" />
+    <Content Include="Content\Images\msls-white-icons-18.png" />
+    <Content Include="Content\Images\msls-white-icons-36.png" />
+    <Content Include="Content\Images\msls-blue-icons-36.png" />
+    <Content Include="Content\Images\ui-anim_basic_16x16-branch.gif" />
+    <Content Include="Content\Images\waiting.gif" />
+    <Content Include="Content\Images\wijeditor\wijmo-ui-editor-colormarker.png" />
+    <Content Include="Content\Images\wijeditor\wijmo-ui-editor-colormask.png" />
+    <Content Include="Content\Images\wijeditor\wijmo-ui-editor-colorwheel.png" />
+    <Content Include="Content\Images\wijeditor\wijmo-ui-icons_000000_240x112.png" />
+    <Content Include="Content\Images\wijeditor\wijmo-ui-icons_ffffff_240x112.png" />
+    <Content Include="Content\Images\wijrating\wijmo-ui-rating.png" />
+    <Content Include="Content\jquery.mobile-1.3.2.css" />
+    <Content Include="Content\jquery.mobile-1.3.2.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.2.css" />
+    <Content Include="Content\jquery.mobile.structure-1.3.2.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.2.css" />
+    <Content Include="Content\jquery.mobile.theme-1.3.2.min.css" />
+    <Content Include="Content\jquery.multilevelpushmenu.css" />
+    <Content Include="Content\jquery.wijmo-pro.all.3.20142.48.min.css" />
+    <Content Include="Content\light-theme-2.5.1.css" />
+    <Content Include="Content\msls-2.5.1.css" />
+    <Content Include="Content\msls-2.5.1.min.css" />
+    <Content Include="Content\msls-dark-2.5.1.css" />
+    <Content Include="Content\msls-light-2.5.1.css" />
+    <Content Include="default-1.0.1.htm" />
+    <Content Include="default-2.0.0.htm" />
+    <Content Include="default-2.5.0.htm" />
+    <Content Include="default-2.5.1.htm" />
+    <Content Include="default-2.5.2.htm" />
+    <Content Include="Content\user-customization.css" />
+    <Content Include="Content\Images\user-logo.png" />
+    <Content Include="Content\Images\user-logo.ico" />
+    <Content Include="Content\Images\user-logo-144.png" />
+    <Content Include="Content\Images\user-splash-screen.png" />
+    <Content Include="Content\Web.config" />
+    <Content Include="default.htm" />
+    <Content Include="packages.config" />
+    <Content Include="Screens\Application\AddEditAPPLICATION1.lsml.js">
+      <DependentUpon>AddEditAPPLICATION1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\BrowsePMApprovalReports.lsml.js">
+      <DependentUpon>BrowsePMApprovalReports.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home\Home.lsml.js">
+      <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home\Home_POC.lsml.js">
+      <DependentUpon>Home_POC.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Charts\ResourceNameFilterChart.lsml.js">
+      <DependentUpon>ResourceNameFilterChart.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Charts\TPFilterReportChart.lsml.js">
+      <DependentUpon>TPFilterReportChart.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Reports\BrowseFilter_PMApprovalReport.lsml.js">
+      <DependentUpon>BrowseFilter_PMApprovalReport.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Reports\BrowseFilter_PMApprovalReport1.lsml.js">
+      <DependentUpon>BrowseFilter_PMApprovalReport1.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\amplify-vsdoc.js" />
+    <Content Include="Scripts\amplify.js" />
+    <Content Include="Scripts\amplify.min.js" />
+    <Content Include="Scripts\c1ls-4.0.20143.39.js" />
+    <Content Include="Scripts\colorbrewer.v1.js" />
+    <Content Include="Scripts\D3-LICENSE.txt" />
+    <Content Include="Scripts\d3.v3.js" />
+    <Content Include="Scripts\d3ls-4.0.20143.39.js" />
+    <Content Include="Scripts\datajs-1.1.1.js" />
+    <Content Include="Scripts\datajs-1.1.1.min.js" />
+    <Content Include="Scripts\GPL-LICENSE.txt" />
+    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.0-vsdoc.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.3.2.min.map" />
+    <Content Include="Scripts\jquery.multilevelpushmenu.menu.js" />
+    <Content Include="Scripts\jquery.multilevelpushmenu.min.js" />
+    <Content Include="Scripts\jquery.multilevelpushmenu.utility.js" />
+    <Content Include="Scripts\jquery.wijmo-open.all.3.20142.48.min.js" />
+    <Content Include="Scripts\jquery.wijmo-pro.all.3.20142.48.min.js" />
+    <Content Include="Scripts\MIT-LICENSE.txt" />
+    <Content Include="Scripts\msls.js" />
+    <Content Include="Scripts\msls-2.5.1-vsdoc.js" />
+    <Content Include="Scripts\msls-2.5.1.js" />
+    <Content Include="Scripts\msls-2.5.1.min.js" />
+    <Content Include="Scripts\README.txt" />
+    <Content Include="Scripts\winjs-1.0.js" />
+    <Content Include="Scripts\winjs-1.0.min.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ServiceMetadataReference Include="..\TimeSheetForecastPOC.Server\TimeSheetForecastPOC.Server.csproj">
+      <Visible>false</Visible>
+    </ServiceMetadataReference>
+  </ItemGroup>
+  <ItemGroup>
+    <LightSwitchModel Include="Properties\Client.lsml">
+      <ProjectCritical>true</ProjectCritical>
+    </LightSwitchModel>
+    <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\Application\AddEditAPPLICATION1.lsml" />
+    <LightSwitchModel Include="Screens\Application\BrowseAPPLICATIONs.lsml" />
+    <LightSwitchModel Include="Screens\BrowsePMApprovalReports.lsml" />
+    <LightSwitchModel Include="Screens\Home\Home.lsml" />
+    <LightSwitchModel Include="Screens\Home\Home_POC.lsml" />
+    <LightSwitchModel Include="Screens\Charts\BrowseTPFilterReport1.lsml" />
+    <LightSwitchModel Include="Screens\Charts\ResourceNameFilterChart.lsml" />
+    <LightSwitchModel Include="Screens\Charts\TPFilterReportChart.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Application Type\AddEditREF_APPLICATION_TYPE.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Application Type\BrowseREF_APPLICATION_TYPEs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Complexity\AddEditREF_COMPLEXITY.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Complexity\BrowseREF_COMPLEXITies.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Document Type\AddEditREF_DOCUMENT_TYPE.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Document Type\BrowseREF_DOCUMENT_TYPEs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Gap\AddEditREF_GAP.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Gap\BrowseREF_GAPs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Locations\AddEditREF_LOCATION.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Locations\BrowseREF_LOCATIONs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Phase\AddEditREF_PHASE1.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Phase\BrowseREF_PHASEs1.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Rate Card\AddEditREF_RATE_CARD.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Rate Card\BrowseREF_RATE_CARDs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Roles\AddEditREF_ROLE.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Roles\BrowseREF_ROLEs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Stake Holders\AddEditREF_STAKEHOLDER1.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Stake Holders\BrowseREF_STAKEHOLDERs1.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Status\AddEditREF_STATUS.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Status\BrowseREF_STATUS.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Technologies\AddEditREF_TECHNOLOGY.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Technologies\BrowseREF_TECHNOLOGies.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Technology Stack\AddEditREF_TECHNOLOGY_STACK.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Technology Stack\BrowseREF_TECHNOLOGY_STACKs.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Vendors\AddEditREF_VENDOR.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Vendors\BrowseREF_VENDORs.lsml" />
+    <LightSwitchModel Include="Screens\Reports\BrowseFilter_PMApprovalReport.lsml" />
+    <LightSwitchModel Include="Screens\Reports\BrowseFilter_PMApprovalReport1.lsml" />
+    <LightSwitchModel Include="Screens\Resource\AddEditRESOURCE.lsml" />
+    <LightSwitchModel Include="Screens\Resource\BrowseRESOURCEs.lsml" />
+    <LightSwitchModel Include="Screens\TP\Appplication\AddEditTP_APPLICATION.lsml" />
+    <LightSwitchModel Include="Screens\TP\Appplication\BrowseTP_APPLICATIONs.lsml" />
+    <LightSwitchModel Include="Screens\TP\ConsolidateTimeSheet\AddEditConsolidatedTimeSheet.lsml" />
+    <LightSwitchModel Include="Screens\TP\ConsolidateTimeSheet\BrowseConsolidatedTimeSheets.lsml" />
+    <LightSwitchModel Include="Screens\TP\Document Link\AddEditTP_DOCUMENT_LINK.lsml" />
+    <LightSwitchModel Include="Screens\TP\Document Link\BrowseTP_DOCUMENT_LINKs.lsml" />
+    <LightSwitchModel Include="Screens\TP\Phase\AddEditTP_PHASE.lsml" />
+    <LightSwitchModel Include="Screens\TP\Phase\BrowseTP_PHASEs.lsml" />
+    <LightSwitchModel Include="Screens\TP\Resource Allocation\AddEditTP_RESOURCE_ALLOCATION.lsml" />
+    <LightSwitchModel Include="Screens\TP\Resource Allocation\BrowseTP_RESOURCE_ALLOCATIONs.lsml" />
+    <LightSwitchModel Include="Screens\TP\Stake Holder\AddEditTP_STAKEHOLDER.lsml" />
+    <LightSwitchModel Include="Screens\TP\Stake Holder\BrowseTP_STAKEHOLDERs.lsml" />
+    <LightSwitchModel Include="Screens\TP\Time Entry\AddEditTP_TIME_ENTRY.lsml" />
+    <LightSwitchModel Include="Screens\TP\Time Entry\BrowseTP_TIME_ENTRies.lsml" />
+    <LightSwitchModel Include="Screens\TP\TPs\AddEditTP.lsml" />
+    <LightSwitchModel Include="Screens\TP\TPs\BrowseTPs.lsml" />
+    <LightSwitchModel Include="Screens\TP\Vendor\AddEditTP_VENDOR.lsml" />
+    <LightSwitchModel Include="Screens\TP\Vendor\BrowseTP_VENDORs.lsml" />
+  </ItemGroup>
+  <ItemGroup>
+    <_ClientBuildFile Include="GeneratedArtifacts\model.json">
+      <SubFolder>Content\Resources\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\data.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\viewModel.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\usercode.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+    <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
+      <SubFolder>Scripts\Generated</SubFolder>
+    </_ClientBuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\TestDBData\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\Microsoft.LightSwitch.Build.Tasks.targets" />
+  <!-- Redefine the targets to be empty -->
+  <Target Name="GetXapOutputFile" />
+  <PropertyGroup>
+    <AppxPackage>false</AppxPackage>
+    <AppxGeneratePriEnabled>false</AppxGeneratePriEnabled>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

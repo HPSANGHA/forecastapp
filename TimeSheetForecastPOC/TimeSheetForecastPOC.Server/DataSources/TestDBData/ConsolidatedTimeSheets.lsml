@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="ConsolidatedTimeSheet">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ConsolidateID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Phase"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="StartWeekDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Week"
+        PropertyType=":Int32?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Application1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="c_Date"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Resource"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Deliverables"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Activity"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Hours"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RatePerDay"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Phase_NotChange"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BilledHours"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="BilledValue"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="TestDBData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="ConsolidatedTimeSheets"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="ConsolidatedTimeSheet" />
+    <QueryOperation
+      Name="ConsolidatedTimeSheets_Single"
+      ReturnType="ConsolidatedTimeSheet">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ConsolidateID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ConsolidateID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsolidatedTimeSheets" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ConsolidateID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ConsolidateID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="ConsolidatedTimeSheets_SingleOrDefault"
+      ReturnType="ConsolidatedTimeSheet">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ConsolidateID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ConsolidateID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="ConsolidatedTimeSheets" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ConsolidateID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ConsolidateID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="TestDBDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="ConsolidatedTimeSheets">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="ConsolidatedTimeSheet" />
+        <SsdlProperty
+          Name="ConsolidateID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="ConsolidatedTimeSheet/Properties[ConsolidateID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Type"
+          Nullable="True"
+          Type="nvarchar"
+          Property="ConsolidatedTimeSheet/Properties[Type]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Phase"
+          Nullable="True"
+          Type="nvarchar"
+          Property="ConsolidatedTimeSheet/Properties[Phase]" />
+        <SsdlProperty
+          Name="StartWeekDate"
+          Nullable="True"
+          Type="date"
+          Property="ConsolidatedTimeSheet/Properties[StartWeekDate]" />
+        <SsdlProperty
+          Name="Week"
+          Nullable="True"
+          Type="int"
+          Property="ConsolidatedTimeSheet/Properties[Week]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Application"
+          Nullable="True"
+          Type="nvarchar"
+          Property="ConsolidatedTimeSheet/Properties[Application1]" />
+        <SsdlProperty
+          Name="Date"
+          Nullable="True"
+          Type="date"
+          Property="ConsolidatedTimeSheet/Properties[c_Date]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Resource"
+          Nullable="True"
+          Type="nvarchar"
+          Property="ConsolidatedTimeSheet/Properties[Resource]" />
+        <SsdlProperty
+          Name="Deliverables"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="ConsolidatedTimeSheet/Properties[Deliverables]" />
+        <SsdlProperty
+          Name="Activity"
+          Nullable="True"
+          Type="nvarchar(max)"
+          Property="ConsolidatedTimeSheet/Properties[Activity]" />
+        <SsdlProperty
+          Name="Hours"
+          Nullable="True"
+          Type="float"
+          Property="ConsolidatedTimeSheet/Properties[Hours]" />
+        <SsdlProperty
+          Name="RatePerDay"
+          Nullable="True"
+          Type="float"
+          Property="ConsolidatedTimeSheet/Properties[RatePerDay]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Phase_NotChange"
+          Nullable="True"
+          Type="nvarchar"
+          Property="ConsolidatedTimeSheet/Properties[Phase_NotChange]" />
+        <SsdlProperty
+          Name="BilledHours"
+          Nullable="True"
+          Type="float"
+          Property="ConsolidatedTimeSheet/Properties[BilledHours]" />
+        <SsdlProperty
+          Name="BilledValue"
+          Nullable="True"
+          Type="float"
+          Property="ConsolidatedTimeSheet/Properties[BilledValue]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>
